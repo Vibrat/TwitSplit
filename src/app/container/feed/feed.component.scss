@@ -1,0 +1,26 @@
+@import "variable";
+
+.container {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    .area {
+        background: white;
+        padding: 4px;
+        &:nth-child(2n+1) {
+            margin-right: 2px;
+            &.text-box {
+                min-width: 240px;
+                flex: 2 0 auto;
+            }
+        }
+        &:nth-child(2n) {
+            margin-left: 2px;
+            &.submit-btn {
+                min-width: 120px;
+                flex: 1 0 auto;
+            }
+        }
+    }
+}

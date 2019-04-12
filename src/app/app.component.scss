@@ -1,0 +1,17 @@
+@import "variable";
+
+.app-view-port {
+    position: fixed;
+    height: calc(100% - 16px);
+    width: calc(100% - 16px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .app-workspace {
+        min-width: 360px;
+        width: 450px;
+        flex-shrink: 1;
+        flex-basis: auto;
+        background-color: $pale-white;
+    }
+}
