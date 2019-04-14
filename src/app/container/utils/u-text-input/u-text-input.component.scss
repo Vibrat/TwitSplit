@@ -6,7 +6,7 @@
     display: flex;
     border: none;
     textarea {
-        border: none;
+        border: 1px solid $pale-white;
         flex-grow: 1;
         resize: none;
         overflow: hidden;

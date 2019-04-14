@@ -1,0 +1,13 @@
+@mixin button($blue, $strong-blue) {
+    padding: 4px 6px;
+    text-align:  center;
+    border-radius: 4px;
+    background-color: $blue;
+    border: 1px solid $blue;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+    &:hover, &:focus {
+        background-color: $strong-blue;
+    }
+}
