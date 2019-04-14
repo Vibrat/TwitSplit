@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { DumpContainerComponents } from "./container";
+import { AppDataService } from "./app.data.service";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { DumpContainerComponents } from "./container";
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ AppDataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

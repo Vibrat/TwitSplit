@@ -1,4 +1,14 @@
 <div class="container">
-    <div class="area text-box">Hello World</div>
-    <div class="area submit-btn"></div>
+    <div class="area feed-box">
+        <div class="content" *ngFor="let item of ($feedContent | async) | keyvalue">
+            <ng-container *ngIf="item.value.length <= 49; else chunkMessage">
+               {{ item.value }}
+            </ng-container>
+            <ng-template #chunkMessage>
+                    <ng-container *ngFor="let chunk of splitMessage(item.value)">
+                           <span>{{ chunk }}</span>
+                    </ng-container>
+            </ng-template>
+        </div>
+    </div>
 </div>

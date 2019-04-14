@@ -1,14 +1,22 @@
-import { Component } from "@angular/core";
+import { Component, Output, Input, EventEmitter, Renderer2, ElementRef, ViewChild, OnChanges, SimpleChanges } from "@angular/core";
 
 @Component({
     selector: 'u-text-input',
-    template: '<textarea (change)="onTyping($event)"></textarea>',
+    template: `<textarea 
+                    #input
+                    [placeholder]="placeholder" 
+                    (change)="onTyping($event)"
+                    [value]="content"></textarea>`,
     styleUrls: ['u-text-input.component.scss']
 })
-export class UTextInputComponent {
+export class UTextInputComponent  {
 
-    onTyping(event) {
-        const userInput = event.target.value;   
-        console.log(userInput);
+    @Input() placeholder: string = '';
+    @Input() content: string = '';
+    @Output() whenTyping: EventEmitter<string> = new EventEmitter();
+
+    protected onTyping(event) {
+        this.content = event.target.value; 
+        this.whenTyping.emit(this.content);
     }
 }

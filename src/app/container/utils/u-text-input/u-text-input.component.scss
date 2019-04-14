@@ -1,0 +1,15 @@
+@import "variable";
+
+:host {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    border: none;
+    textarea {
+        border: none;
+        flex-grow: 1;
+        resize: none;
+        overflow: hidden;
+        word-wrap: break-word;
+    }
+}

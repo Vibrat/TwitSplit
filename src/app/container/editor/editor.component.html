@@ -1,6 +1,11 @@
 <div class="container">
     <div class="area text-box">
-        <u-text-input></u-text-input>
+        <u-text-input 
+            placeholder="Express your idea"
+            [content]="data"
+            (whenTyping)="whenTyping($event)"></u-text-input>
     </div>
-    <div class="area submit-btn"></div>
+    <div class="area submit-btn">
+        <u-btn btnName="Submit" (whenClick)="onClick()"></u-btn>
+    </div>
 </div>
