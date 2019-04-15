@@ -1,10 +1,13 @@
 @import "variable";
 
 .container {
-    height: 240px;
+    min-height: 240px;
     display: flex;
     justify-content: space-between;
     padding: 4px;
+    @media screen and (max-width: 768px) {
+        height: 100%;
+    }
     .area {
         background: white;
         padding: 4px;
@@ -14,8 +17,13 @@
             min-width: 240px;
             flex: 1 auto;
             margin-right: 2px;
-            .content span {
-                display: block;
+            .content span.feed-item {
+                display: inline-block;
+                padding: 8px 8px;
+                margin: 4px;
+                color: white;
+                background: $strong-blue;
+                border-radius: 12px;
             }
         }
     }

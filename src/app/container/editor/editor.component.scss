@@ -11,14 +11,14 @@
         &:nth-child(2n+1) {
             margin-right: 2px;
             &.text-box {
-                min-width: 240px;
+                min-width: 200px;
                 flex: 2 0 auto;
             }
         }
         &:nth-child(2n) {
             margin-left: 2px;
             &.submit-btn {
-                min-width: 120px;
+                min-width: 40px;
                 flex: 1 0 auto;
             }
         }
